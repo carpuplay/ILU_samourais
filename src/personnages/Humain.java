@@ -29,7 +29,7 @@ public class Humain {
 		return boissonPref;
 	}
 
-	private int getQntArgent() {
+	public int getQntArgent() {
 		return qntArgent;
 	}
 
@@ -38,10 +38,10 @@ public class Humain {
 	}
 
 	public void direBonjour() {
-		parler("Bonjour! Je m'appelle" + nom + "et j’aime boire du " + boissonPref);
+		parler("Bonjour! Je m'appelle " + nom + " et j’aime boire du " + boissonPref);
 	}
 
-	public void parler(String texte) {
+	protected void parler(String texte) {
 		System.out.println("(" + nom + ") " + texte);
 	}
 
@@ -59,11 +59,11 @@ public class Humain {
 		}
 	}
 
-	private void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		qntArgent += gain;
 	}
 
-	private void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		qntArgent -= perte;
 
 	}
