@@ -13,11 +13,10 @@ public class Yazuka extends Humain {
 
 	public void extorquer(Commercant commercant) {
 		parler(" Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");
+		parler(commercant.getNom() + ", si tu tiens à la vie donne moi ta bourse ");
 		int argentExtorque = commercant.seFaireExtorquer();
 		gagnerArgent(argentExtorque);
 		reputation++;
-
-		parler(commercant.getNom() + ", si tu tiens à la vie donne moi ta bourse ");
 		parler(" J’ai piqué les " + argentExtorque + " sous de Marco, ce qui me fait " + getQntArgent()
 				+ " sous dans ma poche. Hi ! Hi !");
 	}

@@ -2,6 +2,7 @@ package histoire;
 
 import personnages.Commercant;
 import personnages.Humain;
+import personnages.Ronin;
 import personnages.Yazuka;
 
 public class HistoireTP4 {
@@ -21,6 +22,10 @@ public class HistoireTP4 {
 		Yazuka yazuka = new Yazuka("Pepe", "Wiskey", 0, "Warsong", 0);
 		yazuka.direBonjour();
 		yazuka.extorquer(mariano);
+		
+		Ronin chele = new Ronin("Chele", "magma", 0, 0);
+		chele.direBonjour();
+		chele.donner(mariano);
 	}
 
 }
