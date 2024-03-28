@@ -21,7 +21,7 @@ public class Humain {
 		return qntArgent;
 	}
 
-	private String getNom() {
+	protected String getNom() {
 		return nom;
 	}
 
@@ -55,7 +55,8 @@ public class Humain {
 			boire(bien);
 			perdreArgent(prix);
 		} else {
-			parler("Je n'ai plus que " + qntArgent + " sous en poche. Je ne peux même pas m'offrir un " + bien + " à " + prix + " sous");
+			parler("Je n'ai plus que " + qntArgent + " sous en poche. Je ne peux même pas m'offrir un " + bien + " à "
+					+ prix + " sous");
 		}
 	}
 
@@ -67,14 +68,14 @@ public class Humain {
 		qntArgent -= perte;
 
 	}
-	
-    public static void main(String[] args) {
-        Humain humain = new Humain("Jean", "Coca", 10);
 
-        humain.direBonjour(); 
- 
-        humain.acheter("café", 2); 
-        humain.acheter("marihuana tea", 100);
+	public static void main(String[] args) {
+		Humain humain = new Humain("Jean", "Coca", 10);
 
-    }
+		humain.direBonjour();
+
+		humain.acheter("café", 2);
+		humain.acheter("marihuana tea", 100);
+
+	}
 }
