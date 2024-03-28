@@ -10,6 +10,10 @@ public class Yazuka extends Humain {
 		this.reputation = 0;
 		this.clan = clan;
 	}
+	
+	public int getReputation() {
+		return reputation;
+	}
 
 	public void extorquer(Commercant commercant) {
 		parler(" Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");
@@ -27,6 +31,19 @@ public class Yazuka extends Humain {
 		Commercant mariano = new Commercant("Mariano", null, 0);
 		yazuka.extorquer(mariano);
 
+	}
+	
+	public int perdre() {
+		int fortunePerdu = getQntArgent();
+		perdreArgent(fortunePerdu);
+		reputation --;
+		parler("J'ai perdu mdr");
+		return fortunePerdu;
+	}
+	
+	public void gagner(int gain) {
+		gagnerArgent(gain);
+		parler("J'ai gagné " + gain + "sous");
 	}
 
 }

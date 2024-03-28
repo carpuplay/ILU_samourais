@@ -15,4 +15,13 @@ public class Ronin extends Humain{
 		beneficiaire.recevoir(donnation);
 		perdreArgent(donnation);
 	}
+	
+	public void provoquer(Yazuka adversaire) {
+		int force = honneur * 2;
+		parler(adversaire + "Je vais t'avoir gros arnaqueur!");
+		if (force >= adversaire.getReputation()) {
+			int fortuneGagne = adversaire.perdre();
+			gagnerArgent(fortuneGagne);
+		}
+	}
 }
