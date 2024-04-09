@@ -26,6 +26,8 @@ public class HistoireTP4 {
 		Ronin chele = new Ronin("Chele", "magma", 0, 0);
 		chele.direBonjour();
 		chele.donner(mariano);
+		
+		chele.provoquer(yazuka);
 	}
 
 }

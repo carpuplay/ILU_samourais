@@ -18,10 +18,18 @@ public class Ronin extends Humain{
 	
 	public void provoquer(Yazuka adversaire) {
 		int force = honneur * 2;
-		parler(adversaire + "Je vais t'avoir gros arnaqueur!");
+		parler(adversaire.getNom() + " Je vais t'avoir gros arnaqueur!");
 		if (force >= adversaire.getReputation()) {
 			int fortuneGagne = adversaire.perdre();
+			honneur ++;
 			gagnerArgent(fortuneGagne);
+			
+		} else {
+			int fortuneGagne = getQntArgent();
+			perdreArgent(fortuneGagne);
+			parler(adversaire.getNom() + " tu as gagné pour cette fois");
+			honneur --;
+			adversaire.gagner(fortuneGagne);
 		}
 	}
 }

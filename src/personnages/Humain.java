@@ -7,6 +7,8 @@ public class Humain {
 	private String boissonPref;
 	private int qntArgent;
 	private int qntArgentMax;
+	private int nbConnaissances;
+	private String[] memoire = new String[30];
 
 	public Humain(String nom, String boissonPref, int qntArgentMax) {
 		this.nom = nom;
@@ -69,13 +71,60 @@ public class Humain {
 
 	}
 
-	public static void main(String[] args) {
-		Humain humain = new Humain("Jean", "Coca", 10);
+	public void faireConnaissanceAvec(Humain humain2) {
+		direBonjour();
+		repondre(humain2);
+		memoriser(humain2);
+	}
 
+	private void repondre(Humain humain) {
 		humain.direBonjour();
+		humain.memoriser(this);
+	}
 
-		humain.acheter("café", 2);
-		humain.acheter("marihuana tea", 100);
+	private void memoriser(Humain humain) {
+		String[] tempTab = new String[30];
+
+		if (nbConnaissances < 3) {
+			memoire[nbConnaissances] = humain.getNom();
+			nbConnaissances++;
+
+		} else {
+			for (int i = 1; i < 2; i++) {
+				tempTab[i] = memoire[i - 1];
+				memoire[i-1] = tempTab[i];
+			}
+
+			memoire[0] = humain.getNom();
+		}
+	}
+	
+	private void listerConnaissance() {
+		String message = "Je connais beaucoup de monde dont: ";
+		
+		for (int i = 0; i < 30 ; i++) {
+			if (memoire[i] != null) {
+				message += memoire[i] + ", ";
+			}
+		}
+		
+		parler(message);
+	}
+
+	public static void main(String[] args) {
+		Humain robert = new Humain("Roberto", "Coca", 10);
+		Humain manolo = new Humain("Manolo", "icedtea", 21);
+		Humain sofi = new Humain("Sofi", "fanta", 11);
+		Humain carla = new Humain("Carla", "lime", 30);
+		Humain igor = new Humain("igor", "oreo", 40);
+
+		robert.faireConnaissanceAvec(manolo);
+		robert.faireConnaissanceAvec(sofi);
+		robert.faireConnaissanceAvec(carla);
+		System.out.println("\n");
+		robert.listerConnaissance();
+		robert.faireConnaissanceAvec(igor);
+		robert.listerConnaissance();
 
 	}
 }

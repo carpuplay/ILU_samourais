@@ -37,7 +37,7 @@ public class Yazuka extends Humain {
 		int fortunePerdu = getQntArgent();
 		perdreArgent(fortunePerdu);
 		reputation --;
-		parler("J'ai perdu mdr");
+		parler("J'ai perdu mdr" + fortunePerdu + " en moins...");
 		return fortunePerdu;
 	}
 	
