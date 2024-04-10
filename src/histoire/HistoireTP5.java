@@ -10,9 +10,13 @@ public class HistoireTP5 {
 		Yazuka yaku = new Yazuka("Yaku Le Noir", "whisky", 30, "Warsong");
 		Ronin roro = new Ronin("Roro", "shochu", 60);
 		
+		Samourais akimoto = new Samourais("Miyamoto", "Akimoto", "saké", 80);
+		
 		marco.faireConnaissanceAvec(roro);
 		marco.faireConnaissanceAvec(yaku);
 		marco.faireConnaissanceAvec(kumi);
+		
+		akimoto.direBonjour();
 
 	}
 }
