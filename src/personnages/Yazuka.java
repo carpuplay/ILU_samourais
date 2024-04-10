@@ -14,6 +14,11 @@ public class Yazuka extends Humain {
 	public int getReputation() {
 		return reputation;
 	}
+	
+	@Override
+	public void direBonjour() {
+		parler("Mon clan est celui de " + clan + ".");
+	}
 
 	public void extorquer(Commercant commercant) {
 		parler(" Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");

@@ -14,16 +14,16 @@ public class HistoireTP4 {
 		humain.acheter("café", 2);
 		humain.acheter("marihuana tea", 100);
 		
-		Commercant mariano = new Commercant("Mariano", null, 0);
+		Commercant mariano = new Commercant("Mariano", 0);
 		mariano.direBonjour();
 		mariano.seFaireExtorquer();
 		mariano.recevoir(15);
 		
-		Yazuka yazuka = new Yazuka("Pepe", "Wiskey", 0, "Warsong", 0);
+		Yazuka yazuka = new Yazuka("Pepe", "Wiskey", 0, "Warsong");
 		yazuka.direBonjour();
 		yazuka.extorquer(mariano);
 		
-		Ronin chele = new Ronin("Chele", "magma", 0, 0);
+		Ronin chele = new Ronin("Chele", "magma", 0);
 		chele.direBonjour();
 		chele.donner(mariano);
 		
