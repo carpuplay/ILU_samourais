@@ -5,7 +5,7 @@ public class Yazuka extends Humain {
 	private int reputation;
 	private String clan;
 
-	public Yazuka(String nom, String boissonPref, int qntArgentMax, String clan, int reputation) {
+	public Yazuka(String nom, String boissonPref, int qntArgentMax, String clan) {
 		super(nom, boissonPref, qntArgentMax);
 		this.reputation = 0;
 		this.clan = clan;
@@ -26,10 +26,7 @@ public class Yazuka extends Humain {
 	}
 
 	public static void main(String[] args) {
-		Yazuka yazuka = new Yazuka("Pepe", "Wiskey", 0, "Warsong", 0);
-		yazuka.direBonjour();
-		Commercant mariano = new Commercant("Mariano", null, 0);
-		yazuka.extorquer(mariano);
+
 
 	}
 	
