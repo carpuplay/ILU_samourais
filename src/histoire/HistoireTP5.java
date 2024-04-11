@@ -17,6 +17,7 @@ public class HistoireTP5 {
 		marco.faireConnaissanceAvec(kumi);
 		
 		akimoto.direBonjour();
+		akimoto.boire("Lucum");
 
 	}
 }
