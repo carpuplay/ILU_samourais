@@ -7,7 +7,7 @@ public class Humain {
 	private String boissonPref;
 	private int qntArgent;
 	private int qntArgentMax;
-	private int nbConnaissances;
+	protected int nbConnaissances;
 	private String[] memoire = new String[30];
 
 	public Humain(String nom, String boissonPref, int qntArgentMax) {
